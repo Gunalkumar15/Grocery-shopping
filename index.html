@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shopping App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="page">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+    
+    <div id="shopping-page" class="page hidden">
+        <h1>Select Grocery Items</h1>
+        <ul id="grocery-list">
+            <li>
+                <span>Item 1</span>
+                <button onclick="selectItem(this, 'Item 1')">Select</button>
+            </li>
+            <li>
+                <span>Item 2</span>
+                <button onclick="selectItem(this, 'Item 2')">Select</button>
+            </li>
+            <li>
+                <span>Item 3</span>
+                <button onclick="selectItem(this, 'Item 3')">Select</button>
+            </li>
+        </ul>
+        <button onclick="proceedToAddress()">Proceed to Address</button>
+    </div>
+    
+    <div id="address-page" class="page hidden">
+        <h1>Enter Address</h1>
+        <input type="text" id="address" placeholder="Enter your address">
+        <button onclick="proceedToPayment()">Proceed to Payment</button>
+    </div>
+    
+    <div id="payment-page" class="page hidden">
+        <h1>Select Payment Method</h1>
+        <label>
+            <input type="radio" name="payment-method" value="COD" checked>
+            Cash on Delivery
+        </label>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+    
+    <div id="status-page" class="page hidden">
+        <h1>Order Status</h1>
+        <p id="status-message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
